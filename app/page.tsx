@@ -8,7 +8,7 @@ export default function HomePage() {
       <p>Welcome to the Ops Inbox AI demo repository.</p>
       <ul>
         <li>
-          <Link href="/ops-inbox-demo">Open Ops Inbox Console (Demo 2)</Link>
+          <Link href="./ops-inbox-demo">Open Ops Inbox Console (Demo 2)</Link>
         </li>
       </ul>
     </div>
