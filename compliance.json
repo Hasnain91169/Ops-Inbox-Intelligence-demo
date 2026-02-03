@@ -1,0 +1,32 @@
+{
+  "hs_codes": {
+    "8471.30": {
+      "description": "Automatic data processing machines and units thereof, magnetic or optical readers",
+      "duties_pct": 2.5,
+      "restrictions": []
+    },
+    "8517.62": {
+      "description": "Telephone sets and videophone apparatus",
+      "duties_pct": 5.0,
+      "restrictions": ["requires_testing"]
+    },
+    "2020": {
+      "description": "Cereal preparations",
+      "duties_pct": 15.0,
+      "restrictions": ["requires_inspection", "food_certification"]
+    }
+  },
+  "flagged_shipments": [],
+  "compliance_rules": [
+    {
+      "rule_id": "CR-001",
+      "description": "HS code must match product category",
+      "severity": "critical"
+    },
+    {
+      "rule_id": "CR-002",
+      "description": "Food items require health certificates",
+      "severity": "high"
+    }
+  ]
+}

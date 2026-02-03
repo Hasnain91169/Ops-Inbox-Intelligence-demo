@@ -1,0 +1,38 @@
+[
+  {
+    "id": "ORD-789",
+    "customer": "customer@acme.com",
+    "order_date": "2024-01-10",
+    "status": "pending_delivery",
+    "items": [
+      {"sku": "WIDGET-001", "qty": 100, "hs_code": "8471.30"}
+    ]
+  },
+  {
+    "id": "ORD-790",
+    "customer": "supplier@logistics.com",
+    "order_date": "2024-01-12",
+    "status": "completed",
+    "items": [
+      {"sku": "WIDGET-002", "qty": 50, "hs_code": "8471.30"}
+    ]
+  },
+  {
+    "id": "ORD-791",
+    "customer": "customs@gov.agency",
+    "order_date": "2024-01-15",
+    "status": "on_hold",
+    "items": [
+      {"sku": "WIDGET-003", "qty": 75, "hs_code": "8517.62"}
+    ]
+  },
+  {
+    "id": "ORD-792",
+    "customer": "customer2@retailer.com",
+    "order_date": "2024-01-18",
+    "status": "in_progress",
+    "items": [
+      {"sku": "WIDGET-004", "qty": 200, "hs_code": "8471.30"}
+    ]
+  }
+]

@@ -1,0 +1,29 @@
+[
+  {
+    "id": "INV-2024-050",
+    "order_id": "ORD-789",
+    "amount": 15000,
+    "currency": "USD",
+    "status": "issued",
+    "issue_date": "2024-01-20",
+    "due_date": "2024-02-20"
+  },
+  {
+    "id": "INV-2024-051",
+    "order_id": "ORD-791",
+    "amount": 12500,
+    "currency": "USD",
+    "status": "issued",
+    "issue_date": "2024-01-22",
+    "due_date": "2024-02-22"
+  },
+  {
+    "id": "INV-2024-052",
+    "order_id": "ORD-792",
+    "amount": 5000,
+    "currency": "USD",
+    "status": "paid",
+    "issue_date": "2024-01-18",
+    "payment_date": "2024-01-27"
+  }
+]

@@ -1,0 +1,24 @@
+:root {
+  --bg: #ffffff;
+  --muted: #6c757d;
+  --border: #e9ecef;
+  --accent: #0d6efd;
+  --danger: #d9534f;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background: var(--bg);
+  color: #222;
+}
+
+h1, h2, h3 { margin: 0 0 8px 0 }
+
+button { padding: 6px 10px; border: 1px solid var(--border); background: #fff; border-radius: 4px; cursor: pointer }
+button:disabled { opacity: 0.6; cursor: default }
+
+pre { background: #fafafa; padding: 10px; border-radius: 6px; border: 1px solid var(--border) }
+
+.details { font-size: 13px; color: var(--muted) }

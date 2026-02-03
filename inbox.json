@@ -1,0 +1,42 @@
+[
+  {
+    "id": "email_001",
+    "from": "customer@acme.com",
+    "subject": "URGENT: Shipment SHP-2024-001 Missing - Order #ORD-789",
+    "body": "Hello, we received order ORD-789 but shipment SHP-2024-001 is nowhere to be found. We need this resolved immediately as we have customers waiting. The invoice INV-2024-050 shows it was shipped on Jan 25. Please advise. We are in compliance with HS Code 2020.",
+    "timestamp": "2024-01-28T14:30:00Z",
+    "priority": null
+  },
+  {
+    "id": "email_002",
+    "from": "supplier@logistics.com",
+    "subject": "Delivery Confirmation - SHP-2024-002",
+    "body": "Shipment SHP-2024-002 has been successfully delivered. Tracking reference: TRACK-2024-555. Order ORD-790 completed as scheduled.",
+    "timestamp": "2024-01-28T10:15:00Z",
+    "priority": null
+  },
+  {
+    "id": "email_003",
+    "from": "customs@gov.agency",
+    "subject": "COMPLIANCE ISSUE: Shipment SHP-2024-003 - HS Code Violation",
+    "body": "Shipment SHP-2024-003 for order ORD-791 has been flagged for incorrect HS code classification. The shipment is on hold. Please provide corrected documentation referencing invoice INV-2024-051. This is a critical compliance matter.",
+    "timestamp": "2024-01-28T09:00:00Z",
+    "priority": null
+  },
+  {
+    "id": "email_004",
+    "from": "billing@company.com",
+    "subject": "Invoice INV-2024-052 Payment Received",
+    "body": "Payment of $5,000 received for invoice INV-2024-052. Thank you for your business.",
+    "timestamp": "2024-01-27T16:45:00Z",
+    "priority": null
+  },
+  {
+    "id": "email_005",
+    "from": "customer2@retailer.com",
+    "subject": "Question about order ORD-792",
+    "body": "Hi, just checking on the status of order ORD-792. When can we expect shipment SHP-2024-004 to arrive? Any tracking information available?",
+    "timestamp": "2024-01-27T12:00:00Z",
+    "priority": null
+  }
+]
