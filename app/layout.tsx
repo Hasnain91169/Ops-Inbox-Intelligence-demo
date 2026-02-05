@@ -9,9 +9,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body>
-        <main style={{ fontFamily: 'Inter, system-ui, -apple-system, sans-serif', padding: 20 }}>
-          {children}
-        </main>
+        <main className="app">{children}</main>
       </body>
     </html>
   )
