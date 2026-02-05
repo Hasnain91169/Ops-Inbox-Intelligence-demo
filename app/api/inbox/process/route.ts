@@ -7,6 +7,7 @@ import { extractEntities } from '@/lib/extract'
 import { classify, computeUrgency, routingDecision } from '@/lib/classify'
 import { generateTemplates } from '@/lib/templates'
 import { buildAuditEvent } from '@/lib/audit'
+import { generateLLMOutputs } from '@/lib/llm'
 
 export async function POST(req: Request) {
   const body = await req.json().catch(() => ({}))
@@ -31,13 +32,31 @@ export async function POST(req: Request) {
     const routing = routingDecision(classification, urgency.urgency_score, urgency.sentiment, extracted)
 
     const templates = generateTemplates({ category: classification.category, route_outcome: routing.route_outcome, extracted })
+    const llmOutputs = await generateLLMOutputs({
+      email: {
+        subject: email.subject,
+        body: email.body,
+        from: email.from,
+        received_ts: email.received_ts
+      },
+      extracted,
+      classification: { category: classification.category, confidence: classification.confidence },
+      urgency: { sentiment: urgency.sentiment, urgency_score: urgency.urgency_score },
+      routing,
+      fallback: templates
+    })
+
+    const customer_response = llmOutputs?.customer_response ?? templates.customer_response
+    const internal_summary = llmOutputs?.internal_summary ?? templates.internal_summary
 
     // Reasoning log
     const reasoning_log = {
       extracted_entities: extracted,
       matched_keywords: classification.matched_keywords,
       urgency: urgency,
-      routing_decision: routing
+      routing_decision: routing,
+      llm_used: Boolean(llmOutputs),
+      llm_model: llmOutputs?.model ?? null
     }
 
     const rules_applied: string[] = []
@@ -56,8 +75,8 @@ export async function POST(req: Request) {
       route_outcome: routing.route_outcome,
       automation_allowed: routing.automation_allowed,
       escalated_to: routing.escalated_to,
-      customer_response: templates.customer_response,
-      internal_summary: templates.internal_summary
+      customer_response,
+      internal_summary
     })
 
     results.push({
@@ -67,8 +86,8 @@ export async function POST(req: Request) {
       sentiment: urgency.sentiment,
       urgency_score: urgency.urgency_score,
       route_outcome: routing.route_outcome,
-      customer_response: templates.customer_response,
-      internal_summary: templates.internal_summary,
+      customer_response,
+      internal_summary,
       reasoning_log,
       audit_event
     })

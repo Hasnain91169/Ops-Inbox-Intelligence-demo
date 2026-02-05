@@ -6,7 +6,7 @@ Features
 - App page: /ops-inbox-demo
 - API: POST /api/inbox/process
 - Deterministic extraction → classification → routing → templates → audit → hashing
-- No external services, no LLMs, no secrets, no database
+- Optional OpenAI enhancement (fallbacks to deterministic templates if not configured)
 
 Quick start
 1. npm install
@@ -24,5 +24,12 @@ Code layout
 - src/lib/ — deterministic logic modules (extract, classify, templates, audit, hash)
 
 Notes
-- All logic is deterministic and rule-based to match the requirements exactly.
+- All logic is deterministic and rule-based by default. If OPENAI_API_KEY is set,
+  the demo will enrich responses using OpenAI with a strict timeout.
+
+Optional OpenAI setup
+1. Set OPENAI_API_KEY in your environment or Vercel project.
+2. (Optional) Set OPENAI_MODEL (default gpt-4.1-mini).
+3. (Optional) Set OPENAI_TIMEOUT_MS (default 3500).
+4. (Optional) Set OPENAI_LLM_MODE=off to disable LLM.
 
