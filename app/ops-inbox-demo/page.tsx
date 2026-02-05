@@ -153,7 +153,7 @@ export default function InboxDemoPage() {
         </div>
         <div className="stat-chip">
           <div className="stat-label">Selected</div>
-          <div className="stat-value">{selectedEmail?.email_id ?? '—'}</div>
+          <div className="stat-value">{selectedEmail?.email_id ?? 'â€”'}</div>
         </div>
       </section>
 
@@ -235,7 +235,7 @@ export default function InboxDemoPage() {
               <h2>Message</h2>
               <p className="muted">Selected message details with AI outputs.</p>
             </div>
-            <div className="pill">{selectedEmail?.email_id ?? '—'}</div>
+            <div className="pill">{selectedEmail?.email_id ?? 'â€”'}</div>
           </div>
 
           <div className="card">
@@ -333,3 +333,4 @@ export default function InboxDemoPage() {
     </div>
   )
 }
+
