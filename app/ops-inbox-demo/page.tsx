@@ -116,7 +116,7 @@ export default function InboxDemoPage() {
       <header className="page-header">
         <div>
           <div className="eyebrow">Ops Inbox AI</div>
-          <h1>Ops Inbox Console</h1>
+          <h1 className="gradient-text">Ops Inbox Console</h1>
           <p className="lead">
             Review inbound operations requests, monitor AI routing, and surface
             response-ready drafts in one workspace.
@@ -153,7 +153,7 @@ export default function InboxDemoPage() {
         </div>
         <div className="stat-chip">
           <div className="stat-label">Selected</div>
-          <div className="stat-value">{selectedEmail?.email_id ?? '—'}</div>
+          <div className="stat-value">{selectedEmail?.email_id ?? '-'}</div>
         </div>
       </section>
 
@@ -235,7 +235,7 @@ export default function InboxDemoPage() {
               <h2>Message</h2>
               <p className="muted">Selected message details with AI outputs.</p>
             </div>
-            <div className="pill">{selectedEmail?.email_id ?? '—'}</div>
+            <div className="pill">{selectedEmail?.email_id ?? '-'}</div>
           </div>
 
           <div className="card">

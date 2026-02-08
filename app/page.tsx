@@ -7,7 +7,7 @@ export default function HomePage() {
       <header className="home-hero">
         <div>
           <div className="eyebrow">Demo Workspace</div>
-          <h1>Ops Inbox AI</h1>
+          <h1 className="gradient-text">Automate your logistics coordination</h1>
           <p className="lead">
             A focused console for triaging operational emails with extraction,
             classification, and routing in one view.
