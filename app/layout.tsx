@@ -20,7 +20,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <Link href="/">Home</Link>
               <Link href="/ops-inbox-demo">Demo 2</Link>
             </nav>
-            <Link href="/ops-inbox-demo" className="nav-cta">
+            <Link href="https://www.javedai.com/book" className="nav-cta">
               Get Started
             </Link>
           </header>
