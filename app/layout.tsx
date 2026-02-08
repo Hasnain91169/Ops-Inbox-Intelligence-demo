@@ -19,9 +19,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <nav className="nav-links">
               <Link href="/">Home</Link>
               <Link href="/ops-inbox-demo">Demo 2</Link>
-              <a href="https://vercel.com" target="_blank" rel="noreferrer">
-                Deploy
-              </a>
             </nav>
             <Link href="/ops-inbox-demo" className="nav-cta">
               Get Started
